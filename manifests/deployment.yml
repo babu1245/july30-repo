@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: bjuly03aksclassic 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bjuly03aksclassic
+  template:
+    metadata:
+      labels:
+        app: bjuly03aksclassic 
+    spec:
+      containers:
+        - name: bjuly03aksclassic 
+          image: aug02contregis.azurecr.io/bjuly03aksclassic
+          ports:
+          - containerPort: 80
